@@ -5,7 +5,7 @@ import { WiFog } from "react-icons/wi";
 import { IoIosRainy, IoIosThunderstorm } from "react-icons/io";
 
 export const getWeatherIcon = (code: string) => {
-  if (code) {
+  if (code && typeof code === "string") {
     if (code === "800") {
       return <FaSun />;
     }
