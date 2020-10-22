@@ -16,6 +16,8 @@ export const Weather = () => {
     FeelsLike: 0,
   });
 
+  const [weatherIcon, setWeatherIcon] = useState<JSX.Element>();
+
   useEffect(() => {
     const getWeather = () => {
       fetch(
@@ -37,6 +39,7 @@ export const Weather = () => {
               FeelsLike: wthData.data[0].app_temp,
             };
             setWeatherData(retrievedWeather);
+            setWeatherIcon(getWeatherIcon(wthData?.data[0]?.weather?.code || ""))
           }
         })
         .catch((error) => console.log("Error Occurred", error));
@@ -49,7 +52,7 @@ export const Weather = () => {
 
   return (
     <WeatherWrap>
-      <WeatherIcon>{getWeatherIcon(weatherData.WeatherIcon || "")}</WeatherIcon>
+      <WeatherIcon>{weatherIcon}</WeatherIcon>
       <DataStack>
         <WeatherItem>{`${weatherData.Temperature} °F with ${weatherData.WeatherDescription}`}</WeatherItem>
         <WeatherSubItem>{`Feels Like: ${weatherData.FeelsLike} °F`}</WeatherSubItem>
