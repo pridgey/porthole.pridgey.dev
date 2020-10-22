@@ -9,22 +9,22 @@ export const getWeatherIcon = (code: string) => {
     if (code === "800") {
       return <FaSun />;
     }
-    if (code.startsWith("8")) {
+    if (code?.startsWith("8")) {
       return <MdWbCloudy />;
     }
-    if (code.startsWith("7")) {
+    if (code?.startsWith("7")) {
       return <WiFog />;
     }
-    if (code.startsWith("6")) {
+    if (code?.startsWith("6")) {
       return <FaSnowflake />;
     }
-    if (code.startsWith("5")) {
+    if (code?.startsWith("5")) {
       return <IoIosRainy />;
     }
-    if (code.startsWith("3")) {
+    if (code?.startsWith("3")) {
       return <FaCloudRain />;
     }
-    if (code.startsWith("2")) {
+    if (code?.startsWith("2")) {
       return <IoIosThunderstorm />;
     }
     return <FaMoon />;
