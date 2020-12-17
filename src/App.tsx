@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const Duo = styled.div`
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 `;
 
 function App() {
