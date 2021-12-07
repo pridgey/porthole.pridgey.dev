@@ -12,11 +12,11 @@ export const Layout = ({ children }: LayoutProps) => {
     const getImage = () => {
       const width = window.innerWidth;
       const height = window.innerHeight;
-      fetch(`https://source.unsplash.com/random/${width}x${height}`).then(
-        (response) => {
-          setImage(response?.url);
-        }
-      );
+      fetch(
+        `https://source.unsplash.com/random/${width}x${height}?holiday,christmas`
+      ).then((response) => {
+        setImage(response?.url);
+      });
     };
 
     setInterval(getImage, 1800000);
