@@ -13,7 +13,7 @@ export const Layout = ({ children }: LayoutProps) => {
       const width = window.innerWidth;
       const height = window.innerHeight;
       fetch(
-        `https://source.unsplash.com/random/${width}x${height}?holiday,christmas`
+        `https://source.unsplash.com/random/${width}x${height}?anime`
       ).then((response) => {
         setImage(response?.url);
       });
