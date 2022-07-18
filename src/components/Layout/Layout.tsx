@@ -13,7 +13,7 @@ export const Layout = ({ children }: LayoutProps) => {
       const width = window.innerWidth;
       const height = window.innerHeight;
       fetch(
-        `https://source.unsplash.com/random/${width}x${height}?anime,japan,sweden,sverige,italy,italia,girls,space`
+        `https://source.unsplash.com/random/${width}x${height}?anime,japan,sweden,sverige,italy,italia,sexy,space`
       ).then((response) => {
         setImage(response?.url);
       });
