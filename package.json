@@ -2,6 +2,9 @@
   "name": "porthole-web",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "^16"
+  },
   "dependencies": {
     "@types/gapi": "^0.0.39",
     "@types/gapi.auth2": "^0.0.51",
