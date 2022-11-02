@@ -5,7 +5,7 @@ type LayoutProps = {
   children: React.ReactChild;
 };
 
-const backgroundThemes = "hallown,spooky,pumpkins,witchcraft"; //anime,japan,sweden,sverige,italy,italia,sexy,space
+const backgroundThemes = "anime,japan,sweden,sverige,italy,italia,sexy,space";
 
 export const Layout = ({ children }: LayoutProps) => {
   const [backgroundImage, setImage] = useState("");
